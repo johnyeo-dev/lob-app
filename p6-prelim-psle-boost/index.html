@@ -1,511 +1,808 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Term 3 Math Power Pack | Learning Out of the Box</title>
-<meta name="description" content="P6 Term 3 2026: Prelim Intensive, Spot PSLE Question Types, and 4-Lesson Trial with Coach John Yeo." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOB Term 3 Math Power Pack</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Rubik:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --crimson:#960F0F;
-    --crimson-dark:#6e0b0b;
-    --turquoise:#0ABFBC;
-    --blue:#4A8FE7;
-    --bg:#F8F3F3;
-    --ink:#2b2323;
-    --muted:#6b5f5f;
-    --card:#ffffff;
-    --border:#eadfdf;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family:'Nunito',sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-    line-height:1.55;
-  }
-  h1,h2,h3,h4{font-family:'Rubik',sans-serif;margin:0 0 .5em;color:var(--crimson-dark)}
-  a{color:inherit}
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
-  .btn{
-    display:inline-block;
-    background:var(--crimson);
-    color:#fff!important;
-    text-decoration:none;
-    font-weight:800;
-    padding:14px 28px;
-    border-radius:999px;
-    font-size:16px;
-    box-shadow:0 6px 18px rgba(150,15,15,.25);
-    transition:transform .15s ease;
-  }
-  .btn:hover{transform:translateY(-2px)}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  img { max-width: 100%; display: block; }
 
-  header.topbar{
-    background:var(--crimson);
-    color:#fff;
-    font-size:13px;
-    padding:8px 0;
-  }
-  header.topbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
-  header.topbar a{color:#fff;text-decoration:none;font-weight:700}
-
-  .hero{
-    background:linear-gradient(160deg,var(--crimson) 0%,var(--crimson-dark) 100%);
-    color:#fff;
-    padding:56px 0 40px;
-    text-align:center;
-  }
-  .hero .eyebrow{
-    display:inline-block;
-    background:rgba(255,255,255,.15);
-    padding:6px 16px;
-    border-radius:999px;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    margin-bottom:18px;
-  }
-  .hero h1{color:#fff;font-size:clamp(26px,5vw,38px);margin-bottom:14px}
-  .hero p.sub{font-size:17px;opacity:.92;max-width:620px;margin:0 auto 26px}
-  .hero .byline{font-size:14px;opacity:.8;margin-top:18px}
-
-  .plan-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:14px;
-    margin-top:30px;
-  }
-  .plan-card{
-    background:#fff;
-    border-radius:14px;
-    padding:18px;
-    text-align:left;
-    color:var(--ink);
-  }
-  .plan-card .emoji{font-size:22px}
-  .plan-card h4{font-size:15px;margin:8px 0 4px;color:var(--crimson-dark)}
-  .plan-card .meta{font-size:12.5px;color:var(--muted);margin-bottom:10px}
-  .plan-card .price{font-size:19px;font-weight:900;color:var(--crimson);font-family:'Rubik',sans-serif}
-
-  section{padding:48px 0}
-  section.alt{background:#fff}
-  .section-label{
-    display:inline-block;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--turquoise);
-    margin-bottom:10px;
+  :root {
+    --bg: #FDF0EE;
+    --crimson: #8B1A1A;
+    --accent: #C0392B;
+    --text: #1A1A1A;
+    --muted: #333333;
+    --highlight: #FADADD;
+    --border: #D3CBCB;
+    --white: #ffffff;
+    --font: 'Montserrat', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
   }
 
-  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0}
-  .stat{
-    flex:1 1 140px;
-    background:var(--bg);
-    border-radius:12px;
-    padding:16px;
-    text-align:center;
-  }
-  .stat .num{font-size:24px;font-weight:900;color:var(--crimson);font-family:'Rubik',sans-serif}
-  .stat .label{font-size:13px;color:var(--muted)}
-
-  table.schedule{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:16px;
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-  }
-  table.schedule th, table.schedule td{
-    text-align:left;
-    padding:12px 14px;
-    border-bottom:1px solid var(--border);
-    font-size:14.5px;
-  }
-  table.schedule th{
-    background:var(--crimson);
-    color:#fff;
-    font-weight:700;
-    font-size:12.5px;
-    text-transform:uppercase;
-    letter-spacing:.04em;
-  }
-  table.schedule tr:last-child td{border-bottom:none}
-
-  .gain-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:14px;
-    margin-top:20px;
-  }
-  .gain{
-    background:var(--bg);
-    border-radius:12px;
-    padding:14px 16px;
-    font-size:14.5px;
-    font-weight:700;
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 40px;
   }
 
-  .format-note{
-    background:#FFF6E9;
-    border:1px solid #F3D9A6;
-    border-radius:12px;
-    padding:16px 18px;
-    font-size:14.5px;
-    margin-top:20px;
+  /* ── FLOATING PAYNOW BAR ── */
+  .paynow-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: var(--crimson); color: #fff;
+    padding: 0.45rem 1rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
   }
-  .format-note strong{color:var(--crimson)}
+  .paynow-bar-text { font-size: 0.78rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .paynow-bar-text span { font-weight: 400; opacity: 0.85; }
+  .paynow-bar-btn {
+    background: #fff; color: var(--crimson);
+    font-weight: 800; font-size: 0.72rem; text-decoration: none;
+    padding: 0.3rem 0.75rem; border-radius: 6px; white-space: nowrap; flex-shrink: 0;
+  }
 
-  .pricing-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:16px;
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--bg); border-bottom: 2px solid var(--border);
+    padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    position: sticky; top: 40px; z-index: 100;
   }
-  .pricing-table th, .pricing-table td{
-    text-align:left;
-    padding:12px 14px;
-    border-bottom:1px solid var(--border);
-    font-size:14px;
+  .logo-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-wrap img { height: 40px; width: auto; }
+  .brand-text strong { display: block; font-family: var(--font); font-size: 0.82rem; font-weight: 800; color: var(--crimson); }
+  .brand-text span { font-size: 0.65rem; color: var(--muted); }
+  .header-right { display: flex; align-items: center; gap: 0.6rem; }
+  .header-tagline { font-size: 0.68rem; color: var(--muted); text-align: right; }
+  .header-tagline strong { display: block; font-size: 0.8rem; color: var(--crimson); font-weight: 700; }
+  .wa-header-btn {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: #25D366; color: #fff;
+    font-weight: 800; font-size: 0.72rem;
+    text-decoration: none; padding: 0.35rem 0.75rem; border-radius: 6px; white-space: nowrap;
   }
-  .pricing-table th{
-    background:var(--crimson);
-    color:#fff;
-    font-size:12px;
-    text-transform:uppercase;
-  }
-  .pricing-table .price-col{font-weight:800;color:var(--crimson);white-space:nowrap}
 
-  .save-table{width:100%;border-collapse:collapse;margin-top:14px;background:#fff;border-radius:10px;overflow:hidden}
-  .save-table th, .save-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:14px;text-align:left}
-  .save-table th{background:var(--turquoise);color:#fff;font-size:12px;text-transform:uppercase}
+  /* ── PAGE SHELL ── */
+  .page {
+    min-height: 100vh; padding: 2.5rem 1.25rem 4.5rem;
+    display: flex; flex-direction: column; align-items: center;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, var(--border), #E8E0E0, var(--border)) 1;
+  }
+  .page-inner { width: 100%; max-width: 680px; }
 
-  .payment-box{
-    background:var(--bg);
-    border-radius:12px;
-    padding:18px 20px;
-    margin-top:20px;
-    font-size:14px;
+  /* ── TYPOGRAPHY ── */
+  .page-badge {
+    display: inline-block; background: var(--crimson); color: var(--white);
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.18rem 0.65rem; border-radius: 99px; margin-bottom: 1rem;
   }
-  .payment-box dt{font-weight:800;color:var(--crimson-dark);margin-top:10px}
-  .payment-box dt:first-child{margin-top:0}
-  .payment-box dd{margin:2px 0 0}
+  .pill {
+    display: inline-block; background: var(--highlight); color: var(--crimson);
+    font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.2rem 0.7rem; border-radius: 4px; margin-bottom: 0.6rem;
+  }
+  h1 { font-family: var(--font); font-size: clamp(1.6rem,5vw,2.4rem); font-weight: 900; color: var(--crimson); line-height: 1.15; margin-bottom: 0.3rem; }
+  h2 { font-family: var(--font); font-size: clamp(1.2rem,3.5vw,1.65rem); font-weight: 800; color: var(--crimson); line-height: 1.25; margin-bottom: 0.75rem; }
+  h3 { font-size: 0.72rem; font-weight: 800; color: var(--crimson); text-transform: uppercase; letter-spacing: 0.1em; margin: 1.5rem 0 0.6rem; }
+  p { color: var(--muted); font-size: 1rem; margin-bottom: 0.75rem; line-height: 1.65; }
+  strong { color: var(--text); }
 
-  .testi-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:16px;
-    margin-top:22px;
-  }
-  .testi{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:18px;
-  }
-  .testi .headline{
-    font-weight:800;
-    color:var(--turquoise);
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:.03em;
-    margin-bottom:8px;
-  }
-  .testi p{font-size:14.5px;margin:0 0 10px;font-style:italic}
-  .testi .who{font-size:13px;color:var(--muted);font-weight:700}
+  .divider { width: 40px; height: 3px; background: var(--border); border-radius: 2px; margin: 0.5rem 0 1.25rem; }
 
-  .gems-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:16px;
-    margin-top:22px;
+  /* ── HERO BANNER ── */
+  .hero-banner { position: relative; border-radius: 12px; overflow: hidden; margin: 1rem 0 1.5rem; box-shadow: 0 6px 28px rgba(139,26,26,0.18); }
+  .hero-banner img { width: 100%; height: 200px; object-fit: cover; object-position: center 30%; }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right,rgba(139,26,26,0.85) 0%,rgba(139,26,26,0.4) 65%,transparent 100%);
+    display: flex; flex-direction: column; justify-content: center; padding: 1.5rem 1.75rem;
   }
-  .gem{
-    background:#fff;
-    border-radius:14px;
-    padding:20px;
-    border-top:4px solid var(--crimson);
-  }
-  .gem .letter{
-    font-size:26px;
-    font-weight:900;
-    color:var(--crimson);
-    font-family:'Rubik',sans-serif;
-  }
-  .gem h4{font-size:15.5px;margin:6px 0 6px}
-  .gem p{font-size:13.5px;color:var(--muted);margin:0}
+  .hero-overlay h1 { color: var(--white); font-size: clamp(1.2rem,4vw,1.85rem); margin-bottom: 0.25rem; }
+  .hero-overlay p { color: rgba(255,255,255,0.82); font-size: 0.82rem; margin: 0; }
 
-  footer{
-    background:var(--crimson-dark);
-    color:#fff;
-    padding:36px 0;
-    font-size:14px;
-    text-align:center;
+  /* ── CONTENTS ── */
+  .contents-list { list-style: none; margin: 0.75rem 0; }
+  .contents-list li { border-bottom: 1px solid var(--border); }
+  .contents-list li:first-child { border-top: 1px solid var(--border); }
+  .contents-list a {
+    text-decoration: none; color: var(--crimson); font-weight: 600; font-size: 0.93rem;
+    display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.25rem; transition: color 0.15s;
   }
-  footer a{color:#fff;text-decoration:underline}
-  footer .fine{opacity:.75;font-size:12.5px;margin-top:14px}
+  .contents-list a:hover { color: var(--accent); }
+  .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 1.5rem; height: 1.5rem; background: var(--highlight); border-radius: 50%;
+    font-size: 0.7rem; font-weight: 800; color: var(--crimson); flex-shrink: 0;
+  }
+
+  /* ── COACH ── */
+  .coach-hero {
+    display: flex; align-items: center; gap: 1.1rem;
+    background: var(--crimson); border-radius: 12px; padding: 1.1rem 1.35rem; margin-bottom: 1.25rem;
+  }
+  .coach-photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; border: 3px solid rgba(255,255,255,0.3); }
+  .coach-name { font-family: var(--font); font-size: 1rem; font-weight: 800; color: var(--white); margin-bottom: 0.2rem; }
+  .coach-role { font-size: 0.78rem; color: rgba(255,255,255,0.72); line-height: 1.4; }
+
+  .stat-row { display: flex; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .stat-box { flex: 1; background: var(--highlight); border-radius: 10px; padding: 0.9rem; text-align: center; border: 1px solid var(--border); }
+  .stat-num { font-family: var(--font); font-size: 1.6rem; font-weight: 500; color: var(--crimson); display: block; line-height: 1; }
+  .stat-lbl { font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem; }
+
+  .press-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-bottom: 1.25rem; }
+  .press-card { border-radius: 10px; overflow: hidden; border: 1.5px solid var(--border); position: relative; }
+  .press-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+  .press-card:first-child img { object-position: left 20%; }
+  .press-card:last-child img { object-position: center 15%; }
+  .press-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top,rgba(139,26,26,0.9) 0%,transparent 100%); color: var(--white); font-size: 0.68rem; font-weight: 700; padding: 0.5rem 0.6rem 0.35rem; }
+
+  .gems-flow { display: flex; flex-direction: column; gap: 0; margin-bottom: 0.75rem; }
+  .gem-card-new { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 0.9rem 1.1rem; display: flex; gap: 0.9rem; align-items: flex-start; }
+  .gem-icon-ring { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg,var(--crimson),var(--accent)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .gem-big-letter { font-family: var(--font); font-size: 1.25rem; font-weight: 900; color: var(--white); }
+  .gem-body { flex: 1; }
+  .gem-word { font-family: var(--font); font-size: 0.92rem; font-weight: 800; color: var(--crimson); }
+  .gem-tagline { font-size: 0.875rem; font-style: italic; color: var(--accent); margin: 0.1rem 0 0.25rem; }
+  .gem-desc { font-size: 1rem; color: var(--muted); line-height: 1.5; margin: 0; }
+  .gems-arrow { display: flex; padding: 0.15rem 0 0.15rem 1.4rem; }
+  .gems-tm { font-size: 0.65rem; color: var(--border); text-align: center; margin-top: 0.4rem; letter-spacing: 0.04em; }
+
+  /* ── CHECK LIST ── */
+  .check-list { list-style: none; margin: 0.5rem 0 1rem; }
+  .check-list li { padding: 0.4rem 0 0.4rem 1.7rem; position: relative; color: var(--muted); font-size: 1rem; border-bottom: 1px solid var(--border); }
+  .check-list li:last-child { border-bottom: none; }
+  .check-list li::before { content: '✔'; position: absolute; left: 0; color: var(--crimson); font-weight: 700; }
+
+  /* ── QUICK FACTS ── */
+  .quick-facts { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.5rem; margin: 0.75rem 0 1rem; }
+  .fact-box { background: var(--white); border-radius: 8px; padding: 1rem 0.5rem; text-align: center; border: 2px solid var(--border); }
+  .fact-val { font-family: var(--font); font-size: 1.4rem; font-weight: 700; color: var(--crimson); display: block; line-height: 1.2; }
+  .fact-lbl { font-size: 0.95rem; font-weight: 500; color: var(--text); margin-top: 0.3rem; }
+
+  /* ── BENEFIT GRID ── */
+  .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0.5rem 0 1rem; }
+  .benefit-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 8px; padding: 0.75rem 0.85rem; display: flex; gap: 0.5rem; align-items: flex-start; }
+  .benefit-icon { font-size: 1.1rem; flex-shrink: 0; }
+  .benefit-title { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+
+  /* ── PRICE BADGE ── */
+  .price-badge { display: inline-flex; align-items: baseline; gap: 0.35rem; background: var(--crimson); color: var(--white); font-size: 1.4rem; font-weight: 500; font-family: var(--font); padding: 0.45rem 1.1rem; border-radius: 8px; margin: 0.75rem 0; box-shadow: 0 3px 12px rgba(139,26,26,0.22); }
+  .price-badge span { font-size: 1rem; font-weight: 600; font-family: var(--sans); }
+
+  /* ── TIER CARDS ── */
+  .tier-row { display: flex; gap: 0.75rem; margin: 0.75rem 0 1rem; }
+  .tier-card { flex: 1; border-radius: 10px; padding: 1rem; text-align: center; border: 2px solid var(--border); background: var(--white); }
+  .tier-card.highlight { border-color: var(--crimson); }
+  .tier-tag { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.35rem; }
+  .tier-card.highlight .tier-tag { color: var(--crimson); }
+  .tier-price { font-family: var(--font); font-size: 2rem; font-weight: 500; color: var(--crimson); line-height: 1; }
+  .tier-per { font-size: 0.9rem; color: var(--muted); margin-top: 0.35rem; }
+
+  /* ── SCHEDULE TABLE ── */
+  .schedule-table { width: 100%; border-collapse: collapse; margin: 0.5rem 0 1rem; font-size: 0.85rem; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .schedule-table thead tr { background: var(--crimson); color: var(--white); }
+  .schedule-table th { padding: 0.5rem 0.8rem; text-align: left; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+  .schedule-table td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--border); color: var(--muted); background: var(--white); }
+  .schedule-table tr:last-child td { border-bottom: none; }
+  .schedule-table tr:nth-child(even) td { background: var(--bg); }
+  .snum { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: var(--highlight); border-radius: 50%; font-size: 0.68rem; font-weight: 800; color: var(--crimson); }
+
+  /* ── INFO BLOCK ── */
+  .info-block { background: var(--highlight); border-left: 4px solid var(--crimson); border-radius: 0 8px 8px 0; padding: 0.85rem 1rem; margin: 0.75rem 0; }
+  .info-block p { margin: 0; color: var(--text); font-size: 1rem; }
+
+  /* ── PRICING TABLE ── */
+  .pricing-summary { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1.25rem; font-size: 0.88rem; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .pricing-summary thead tr { background: var(--crimson); color: #fff; }
+  .pricing-summary th { padding: 0.55rem 0.7rem; text-align: left; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+  .pricing-summary td { padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--border); color: var(--muted); background: var(--white); vertical-align: top; }
+  .pricing-summary tr:last-child td { border-bottom: none; }
+  .pricing-summary tr:nth-child(even) td { background: var(--bg); }
+  .pricing-summary .prog-col { font-weight: 600; color: var(--text); }
+  .pricing-summary .price-col { font-family: var(--font); font-weight: 500; color: var(--crimson); white-space: nowrap; }
+  .pricing-summary .bundle-row td { background: var(--highlight); }
+  .pricing-summary .bundle-row .prog-col { color: var(--crimson); }
+
+  /* ── LEVEL BADGE ── */
+  .level-badge { background: var(--crimson); color: var(--white); font-family: var(--font); font-size: 2.8rem; font-weight: 900; padding: 0.2rem 1.1rem; border-radius: 12px; letter-spacing: 0.04em; line-height: 1.1; display: inline-block; }
+
+  .individual-list { list-style: none; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin: 0.5rem 0; }
+  .individual-list li { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0.9rem; border-bottom: 1px solid var(--border); font-size: 0.83rem; color: var(--muted); background: var(--white); }
+  .individual-list li:last-child { border-bottom: none; }
+  .individual-list li:nth-child(even) { background: var(--bg); }
+  .i-price { font-weight: 500; color: var(--crimson); white-space: nowrap; }
+
+  /* ── PAYNOW ── */
+  .paynow-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.25rem; margin: 1.25rem 0; display: flex; gap: 1.25rem; align-items: flex-start; }
+  .paynow-qr { width: 110px; height: 110px; object-fit: contain; flex-shrink: 0; border-radius: 8px; border: 1px solid var(--border); }
+  .paynow-badge { display: inline-flex; align-items: center; gap: 0.35rem; background: #6B21A8; color: white; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.65rem; border-radius: 99px; margin-bottom: 0.7rem; }
+  .paynow-row { display: flex; gap: 0.5rem; margin-bottom: 0.35rem; font-size: 1rem; align-items: flex-start; }
+  .paynow-row .lbl { color: var(--muted); flex-shrink: 0; font-size: 0.72rem; min-width: 50px; padding-top: 0.05rem; }
+  .paynow-row .val { color: var(--text); font-weight: 600; line-height: 1.4; }
+  .paynow-note { margin-top: 0.65rem; padding-top: 0.65rem; border-top: 1px solid var(--border); font-size: 1rem; color: var(--muted); line-height: 1.5; }
+  .paynow-note strong { color: var(--crimson); }
+
+  .reminder-list { list-style: none; margin: 0.5rem 0; }
+  .reminder-list li { padding: 0.35rem 0 0.35rem 1.6rem; position: relative; color: var(--muted); font-size: 1rem; }
+  .reminder-list li .emoji { position: absolute; left: 0; }
+  .refund-box { background: #fff5f5; border: 1.5px solid var(--accent); border-radius: 8px; padding: 0.85rem 1rem; margin: 1rem 0; }
+  .refund-box p { color: var(--accent); font-size: 1rem; margin: 0; }
+  .refund-box strong { color: var(--accent); }
+
+  /* ── TESTIMONIALS ── */
+  .testi-grid { display: flex; flex-direction: column; gap: 0.75rem; }
+  .testimonial { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem 0.85rem; position: relative; }
+  .testimonial::before { content: '\201C'; font-family: Georgia,serif; font-size: 3.5rem; color: var(--highlight); position: absolute; top: -0.4rem; left: 0.65rem; line-height: 1; }
+  .result-tag { display: inline-block; background: var(--highlight); color: var(--crimson); font-size: 0.68rem; font-weight: 800; padding: 0.18rem 0.55rem; border-radius: 5px; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .testi-quote { font-size: 1rem; color: var(--text); font-style: italic; line-height: 1.6; padding-top: 0.9rem; }
+  .testi-attrib { margin-top: 0.5rem; font-size: 0.875rem; color: var(--muted); font-weight: 600; }
+
+  /* ── PROGRAMME MENU CARDS ── */
+  .prog-menu { display: flex; flex-direction: column; gap: 0.55rem; margin: 1rem 0 1.25rem; }
+  .prog-card { display: flex; align-items: center; gap: 0.9rem; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 0.75rem 1rem; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; }
+  .prog-card:hover { border-color: var(--crimson); box-shadow: 0 2px 10px rgba(139,26,26,0.1); }
+  .prog-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .prog-info { flex: 1; }
+  .prog-name { font-family: var(--font); font-size: 0.9rem; font-weight: 800; color: var(--crimson); line-height: 1.2; }
+  .prog-desc { font-size: 0.82rem; color: var(--muted); margin: 0.1rem 0 0; }
+  .prog-price { font-family: var(--font); font-size: 1rem; font-weight: 500; color: var(--crimson); white-space: nowrap; }
+
+  /* ── STORY NUDGE ── */
+  .story-nudge { background: var(--highlight); border-radius: 8px; padding: 0.65rem 1rem; margin-top: 1.5rem; font-size: 0.9rem; color: var(--crimson); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+
+  /* ── BACK TO TOP ── */
+  .back-top { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--crimson); font-size: 0.78rem; font-weight: 700; text-decoration: none; border: 1.5px solid var(--crimson); padding: 0.4rem 0.9rem; border-radius: 99px; margin-top: 1.75rem; transition: background 0.2s, color 0.2s; align-self: flex-start; }
+  .back-top:hover { background: var(--crimson); color: var(--white); }
+
+  /* ── SECTION BACKGROUNDS ── */
+  .page-white { background: #ffffff; }
+  .page-dark { background: linear-gradient(160deg,#140404 0%,#2E0A0A 55%,#5A1414 100%); }
+  .page-dark h2, .page-dark h3 { color: #ffffff; }
+  .page-dark p { color: rgba(255,255,255,0.75); }
+  .page-dark strong { color: #ffffff; }
+  .page-dark .pill { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); }
+  .page-dark .divider { background: linear-gradient(90deg,#E8323C,rgba(255,255,255,0.3)); }
+  .page-dark .testimonial { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+  .page-dark .testimonial::before { color: rgba(255,255,255,0.1); }
+  .page-dark .result-tag { background: #ffffff; color: var(--crimson); font-size: 1.1rem; padding: 0.4rem 1rem; }
+  .page-dark .testi-quote { color: rgba(255,255,255,0.9); }
+  .page-dark .testi-attrib { color: rgba(255,255,255,0.5); }
+  .page-dark .story-nudge { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8); }
+  .page-dark .back-top { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); }
+  .page-dark .back-top:hover { background: rgba(255,255,255,0.1); color: #ffffff; }
+
+  /* ── FOOTER ── */
+  footer { text-align: center; padding: 1.75rem 1.25rem; font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--border); background: var(--bg); }
+  footer img { height: 32px; width: auto; margin: 0 auto 0.4rem; }
+  footer a { color: var(--crimson); text-decoration: none; }
+
+  @media (max-width: 480px) {
+    .coach-hero { flex-direction: column; text-align: center; }
+    .press-grid { grid-template-columns: 1fr 1fr; }
+    .benefit-grid { grid-template-columns: 1fr 1fr; }
+    .paynow-card { flex-direction: column; align-items: center; text-align: center; }
+    .paynow-row { justify-content: center; }
+    .wa-header-btn { display: none; }
+    .paynow-bar-text span { display: none; }
+  }
 </style>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="wrap">
-    <span>🎓 Learning Out of the Box · learningoutofthebox.org</span>
-    <a href="https://wa.me/6585037519">💬 WhatsApp Us</a>
+<!-- ── FLOATING PAYNOW BAR ── -->
+<div class="paynow-bar">
+  <div class="paynow-bar-text">
+    📱 PayNow · UEN: <strong style="letter-spacing:0.06em;color:#fff;font-size:0.88rem;">201410491Z</strong>
+  </div>
+  <a href="#page5" class="paynow-bar-btn">Pay Now ↓</a>
+</div>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <a href="https://www.learningoutofthebox.org" target="_blank" rel="noopener" class="logo-wrap">
+    <img src="logo-owl.png" alt="Learning Out of the Box">
+    <div class="brand-text">
+      <strong>Learning Out of the Box</strong>
+      <span>learningoutofthebox.org</span>
+    </div>
+  </a>
+  <div class="header-right">
+    <a href="https://wa.link/qkft5g" target="_blank" rel="noopener" class="wa-header-btn">💬 WhatsApp Us</a>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:3px;">
+      <span style="font-size:0.55rem;color:var(--muted);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap;">Text size</span>
+      <div style="display:flex;gap:3px;">
+        <button onclick="setFont(16)" id="fsA"  style="background:var(--crimson);border:1.5px solid var(--crimson);color:var(--white);font-weight:800;font-size:0.7rem;padding:0.2rem 0.45rem;border-radius:6px;cursor:pointer;line-height:1;">A</button>
+        <button onclick="setFont(20)" id="fsAp" style="background:var(--highlight);border:1.5px solid var(--border);color:var(--crimson);font-weight:800;font-size:0.8rem;padding:0.2rem 0.45rem;border-radius:6px;cursor:pointer;line-height:1;">A+</button>
+        <button onclick="setFont(24)" id="fsApp" style="background:var(--highlight);border:1.5px solid var(--border);color:var(--crimson);font-weight:800;font-size:0.9rem;padding:0.2rem 0.45rem;border-radius:6px;cursor:pointer;line-height:1;">A++</button>
+      </div>
+    </div>
   </div>
 </header>
+<script>
+  function setFont(size) {
+    document.body.style.fontSize = size + 'px';
+    var sizes = {16:'fsA', 20:'fsAp', 24:'fsApp'};
+    ['fsA','fsAp','fsApp'].forEach(function(id) {
+      var btn = document.getElementById(id);
+      btn.style.background = 'var(--highlight)';
+      btn.style.borderColor = 'var(--border)';
+      btn.style.color = 'var(--crimson)';
+    });
+    var active = document.getElementById(sizes[size]);
+    active.style.background = 'var(--crimson)';
+    active.style.borderColor = 'var(--crimson)';
+    active.style.color = 'var(--white)';
+  }
+</script>
 
-<section class="hero">
-  <div class="wrap">
-    <span class="eyebrow">For P6 Students · Term 3 2026</span>
-    <h1>Your Child Walks Into PSLE Knowing What to Expect</h1>
-    <p class="sub">Confident, prepared, and ready to score. The Term 3 Math Power Pack with Coach John Yeo.</p>
-    <p class="byline">By Coach John Yeo · LOB Education Centre</p>
+<!-- ══════════════════════════════════
+     PAGE 1 — Headline + Offers
+══════════════════════════════════ -->
+<section class="page" id="page1">
+  <div class="page-inner">
 
-    <div class="plan-grid">
-      <div class="plan-card">
-        <div class="emoji">📖</div>
-        <h4>Prelim Intensive</h4>
-        <div class="meta">3 sessions · 2.5hr each · Online · Jun–Jul</div>
-        <div class="price">$225</div>
-      </div>
-      <div class="plan-card">
-        <div class="emoji">🔍</div>
-        <h4>Spot PSLE Question Types</h4>
-        <div class="meta">4 sessions · 1hr each · Online · Sep</div>
-        <div class="price">$289</div>
-      </div>
-      <div class="plan-card">
-        <div class="emoji">📦</div>
-        <h4>Prelim + Spot Bundle</h4>
-        <div class="meta">Both workshops together · 5% off</div>
-        <div class="price">$488</div>
-      </div>
-      <div class="plan-card">
-        <div class="emoji">🎯</div>
-        <h4>4-Lesson Trial</h4>
-        <div class="meta">Regular weekly coaching · Online or Physical</div>
-        <div class="price">from $400</div>
+    <p style="font-size:0.72rem;font-weight:800;color:var(--crimson);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem;">🎓 For P6 Students · Term 3 2026</p>
+    <div style="background:var(--crimson);color:var(--white);border-radius:12px;padding:1.25rem 1.4rem;margin:0 0 1.25rem;text-align:center;">
+      <p style="font-family:'Montserrat',Georgia,serif;font-size:clamp(1.1rem,3.5vw,1.45rem);font-weight:800;color:var(--white);line-height:1.35;margin:0;">Your child walks into the PSLE exam hall knowing what to expect — confident, prepared, and ready to score.</p>
+    </div>
+
+    <div class="hero-banner">
+      <img src="workshop.jpg" alt="Coach John conducting a workshop">
+      <div class="hero-overlay">
+        <h1>Term 3 Math Power Pack</h1>
+        <p>By Coach John Yeo · LOB Education Centre</p>
       </div>
     </div>
+
+    <div class="prog-menu">
+      <a href="#page2" class="prog-card" style="border-color:var(--crimson);border-width:2px;">
+        <span class="prog-icon">📖</span>
+        <div class="prog-info">
+          <div class="prog-name">Prelim Intensive</div>
+          <div class="prog-desc">3 sessions · 2.5hr each · Online · Jun–Jul</div>
+        </div>
+        <span class="prog-price">$225</span>
+      </a>
+      <a href="#page3" class="prog-card">
+        <span class="prog-icon">🔍</span>
+        <div class="prog-info">
+          <div class="prog-name">Spot PSLE Question Types</div>
+          <div class="prog-desc">4 sessions · 1hr each · Online · Sep</div>
+        </div>
+        <span class="prog-price">$289</span>
+      </a>
+      <a href="#page5" class="prog-card" style="background:var(--highlight);">
+        <span class="prog-icon">📦</span>
+        <div class="prog-info">
+          <div class="prog-name">Prelim + Spot Bundle</div>
+          <div class="prog-desc">Both workshops together · 5% off</div>
+        </div>
+        <span class="prog-price" style="color:var(--accent);">$488</span>
+      </a>
+      <a href="#page4" class="prog-card">
+        <span class="prog-icon">🎯</span>
+        <div class="prog-info">
+          <div class="prog-name">4-Lesson Trial</div>
+          <div class="prog-desc">Regular weekly coaching · Online or Physical</div>
+        </div>
+        <span class="prog-price">from $400</span>
+      </a>
+    </div>
+
+    <p style="font-size:0.72rem;font-weight:800;color:var(--crimson);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;">📋 What's Inside</p>
+    <ul class="contents-list">
+      <li><a href="#page2"><span class="num">2</span> Prelim Intensive (3 sessions)</a></li>
+      <li><a href="#page3"><span class="num">3</span> Spot PSLE Question Types (4 sessions)</a></li>
+      <li><a href="#page4"><span class="num">4</span> 4-Lesson Trial (P6)</a></li>
+      <li><a href="#page5"><span class="num">5</span> Pricing &amp; Payment</a></li>
+      <li><a href="#page6"><span class="num">6</span> What Parents Say</a></li>
+      <li><a href="#page7"><span class="num">7</span> Meet Coach John</a></li>
+    </ul>
   </div>
 </section>
 
-<section id="prelim">
-  <div class="wrap">
-    <span class="section-label">Prelim Readiness</span>
-    <h2>📖 Prelim Intensive (3 sessions)</h2>
-    <p>More marks come from knowing what the question is really asking. This workshop trains your child to see the pattern, apply the right method, and stop losing marks to questions they actually can solve.</p>
-    <div class="stat-row">
-      <div class="stat"><div class="num">3</div><div class="label">Sessions</div></div>
-      <div class="stat"><div class="num">2.5hr</div><div class="label">Per session</div></div>
-      <div class="stat"><div class="num">Online</div><div class="label">Via Zoom</div></div>
-      <div class="stat"><div class="num">$225</div><div class="label">$75 / session</div></div>
+<!-- ══════════════════════════════════
+     PAGE 2 — Prelim Intensive
+══════════════════════════════════ -->
+<section class="page page-white" id="page2">
+  <div class="page-inner">
+    <span class="page-badge">Page 2 of 7</span>
+    <span class="pill">Prelim Readiness</span>
+    <h2>📖 Prelim Intensive <small style="font-size:0.65em;font-weight:700;color:var(--accent);vertical-align:middle;">(3 sessions)</small></h2>
+    <p style="font-size:1rem;color:var(--muted);margin-bottom:0.25rem;">More marks come from knowing what the question is really asking. This workshop trains your child to see the pattern, apply the right method, and stop losing marks to questions they actually can solve.</p>
+
+    <div class="divider"></div>
+
+    <div class="quick-facts">
+      <div class="fact-box"><span class="fact-val">3</span><span class="fact-lbl">Sessions</span></div>
+      <div class="fact-box"><span class="fact-val">2.5hr</span><span class="fact-lbl">Per session</span></div>
+      <div class="fact-box"><span class="fact-val">Online</span><span class="fact-lbl">Via Zoom</span></div>
     </div>
-    <p style="font-size:14.5px">New worksheet + full video replay solutions every session. Covers Remainder · Fractions · Ratio · Average · Angles &amp; more. Open to new and existing LOB students.</p>
-    <div class="format-note">
-      <strong>Simplify in action:</strong> Coach John breaks each question type into a clear, repeatable method. Your child doesn't just practise &mdash; they understand why the method works. That understanding is what holds under exam pressure and translates into marks.
+
+    <div class="price-badge">$225 <span>($75 / session)</span></div>
+
+    <ul class="check-list">
+      <li>New worksheet + full video replay solutions every session</li>
+      <li>Remainder · Fractions · Ratio · Average · Angles &amp; more</li>
+      <li>Open to new and existing LOB students</li>
+    </ul>
+
+    <div class="info-block">
+      <p><strong>Simplify in action:</strong> Coach John breaks each question type into a clear, repeatable method. Your child doesn't just practise — they <strong>understand why the method works</strong>. That understanding is what holds under exam pressure and translates into marks.</p>
     </div>
-    <h3 style="margin-top:26px">Term 3 Schedule</h3>
-    <table class="schedule">
+
+    <h3>Term 3 Schedule</h3>
+    <table class="schedule-table">
       <thead><tr><th>#</th><th>Date</th><th>Time</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td>Mon, 29 Jun 2026</td><td>6&ndash;8.30pm</td></tr>
-        <tr><td>2</td><td>Fri, 17 Jul 2026</td><td>6&ndash;8.30pm</td></tr>
-        <tr><td>3</td><td>Mon, 27 Jul 2026</td><td>6&ndash;8.30pm</td></tr>
+        <tr><td><span class="snum">1</span></td><td>Mon, 29 Jun 2026</td><td>6–8.30pm</td></tr>
+        <tr><td><span class="snum">2</span></td><td>Fri, 17 Jul 2026</td><td>6–8.30pm</td></tr>
+        <tr><td><span class="snum">3</span></td><td>Mon, 27 Jul 2026</td><td>6–8.30pm</td></tr>
       </tbody>
     </table>
+
+    <div class="story-nudge">👇 Next: The PSLE workshop that trains your child to spot the question type the moment they read it.</div>
+    <a href="#page1" class="back-top">↑ Back to top</a>
   </div>
 </section>
 
-<section class="alt" id="spot">
-  <div class="wrap">
-    <span class="section-label">PSLE Readiness</span>
-    <h2>🔍 Spot PSLE Question Types (4 sessions)</h2>
-    <p>The child who walks into PSLE and recognises the question type in 5 seconds has a massive advantage. This workshop builds exactly that instinct. Your child spends exam time solving, not deciphering.</p>
-    <div class="stat-row">
-      <div class="stat"><div class="num">4</div><div class="label">Sessions</div></div>
-      <div class="stat"><div class="num">1hr</div><div class="label">Per session</div></div>
-      <div class="stat"><div class="num">Zoom</div><div class="label">Online</div></div>
-      <div class="stat"><div class="num">$289</div><div class="label">4 sessions</div></div>
+<!-- ══════════════════════════════════
+     PAGE 3 — Spot PSLE Question Types
+══════════════════════════════════ -->
+<section class="page" id="page3">
+  <div class="page-inner">
+    <span class="page-badge">Page 3 of 7</span>
+    <span class="pill">PSLE Readiness</span>
+    <h2>🔍 Spot PSLE Question Types <small style="font-size:0.65em;font-weight:700;color:var(--accent);vertical-align:middle;">(4 sessions)</small></h2>
+    <p style="font-size:1rem;color:var(--muted);margin-bottom:0.25rem;">The child who walks into PSLE and recognises the question type in 5 seconds has a massive advantage. This workshop builds exactly that instinct. Your child spends exam time solving, not deciphering.</p>
+
+    <div class="divider"></div>
+
+    <div class="quick-facts">
+      <div class="fact-box"><span class="fact-val">4</span><span class="fact-lbl">Sessions</span></div>
+      <div class="fact-box"><span class="fact-val">1hr</span><span class="fact-lbl">Per session</span></div>
+      <div class="fact-box"><span class="fact-val">Zoom</span><span class="fact-lbl">Online</span></div>
     </div>
-    <p style="font-size:14.5px"><strong>Guide + Simplify in action:</strong> every session, your child learns to read a question and immediately identify the method needed. No more blanking out. No more wasted time re-reading. Just recognition, method, marks.</p>
-    <h3 style="margin-top:20px">What Your Child Gains</h3>
-    <div class="gain-grid">
-      <div class="gain">🎯 Spot question types instantly</div>
-      <div class="gain">🧠 Strategic note-taking skills</div>
-      <div class="gain">💪 Exam confidence boost</div>
-      <div class="gain">📓 Active learning, no worksheets</div>
+
+    <div class="price-badge">$289 <span>(4 sessions)</span></div>
+
+    <div class="info-block">
+      <p><strong>Guide + Simplify in action:</strong> every session, your child learns to read a question and immediately identify the method needed. No more blanking out. No more wasted time re-reading. Just <strong>recognition, method, marks</strong>.</p>
     </div>
-    <h3 style="margin-top:26px">Term 3 Schedule</h3>
-    <table class="schedule">
+
+    <h3>What Your Child Gains</h3>
+    <div class="benefit-grid">
+      <div class="benefit-item"><span class="benefit-icon">🎯</span><div class="benefit-title">Spot question types instantly</div></div>
+      <div class="benefit-item"><span class="benefit-icon">🧠</span><div class="benefit-title">Strategic note-taking skills</div></div>
+      <div class="benefit-item"><span class="benefit-icon">💪</span><div class="benefit-title">Exam confidence boost</div></div>
+      <div class="benefit-item"><span class="benefit-icon">📓</span><div class="benefit-title">Active learning, no worksheets</div></div>
+    </div>
+
+    <h3>Term 3 Schedule</h3>
+    <table class="schedule-table">
       <thead><tr><th>#</th><th>Date</th><th>Time</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td>Fri, 4 Sep 2026</td><td>6&ndash;7pm</td></tr>
-        <tr><td>2</td><td>Mon, 7 Sep 2026</td><td>6&ndash;7pm</td></tr>
-        <tr><td>3</td><td>Mon, 21 Sep 2026</td><td>3&ndash;4pm</td></tr>
-        <tr><td>4</td><td>Wed, 23 Sep 2026</td><td>6&ndash;7pm</td></tr>
+        <tr><td><span class="snum">1</span></td><td>Fri, 4 Sep 2026</td><td>6–7pm</td></tr>
+        <tr><td><span class="snum">2</span></td><td>Mon, 7 Sep 2026</td><td>6–7pm</td></tr>
+        <tr><td><span class="snum">3</span></td><td>Mon, 21 Sep 2026</td><td>3–4pm</td></tr>
+        <tr><td><span class="snum">4</span></td><td>Wed, 23 Sep 2026</td><td>6–7pm</td></tr>
       </tbody>
     </table>
+
+    <div class="story-nudge">👇 Next: Regular weekly coaching that builds your child's confidence lesson after lesson.</div>
+    <a href="#page1" class="back-top">↑ Back to top</a>
   </div>
 </section>
 
-<section id="trial">
-  <div class="wrap">
-    <span class="section-label">Ongoing Support</span>
+<!-- ══════════════════════════════════
+     PAGE 4 — 4-Lesson Trial
+══════════════════════════════════ -->
+<section class="page page-white" id="page4">
+  <div class="page-inner">
+    <span class="page-badge">Page 4 of 7</span>
+    <span class="pill">Ongoing Support</span>
     <h2>🎯 4-Lesson Trial</h2>
-    <p>This is where the grade improvement begins. Regular, structured coaching that builds on itself week after week. Not a one-off fix.</p>
-    <div class="stat-row">
-      <div class="stat"><div class="num">4</div><div class="label">Lessons</div></div>
-      <div class="stat"><div class="num">2hr</div><div class="label">Per lesson</div></div>
-      <div class="stat"><div class="num">P6</div><div class="label">Open to</div></div>
+    <p style="font-size:1rem;color:var(--muted);margin-bottom:0.25rem;">This is where the grade improvement begins. Regular, structured coaching that builds on itself week after week. Not a one-off fix.</p>
+    <div class="divider"></div>
+
+    <div class="quick-facts">
+      <div class="fact-box"><span class="fact-val">4</span><span class="fact-lbl">Lessons</span></div>
+      <div class="fact-box"><span class="fact-val">2hr</span><span class="fact-lbl">Per lesson</span></div>
+      <div class="fact-box"><span class="fact-val">P6</span><span class="fact-lbl">Open to</span></div>
     </div>
-    <div class="plan-grid" style="margin-top:10px">
-      <div class="plan-card">
-        <h4>Online</h4>
-        <div class="price">$400</div>
-        <div class="meta">$100 / lesson</div>
-      </div>
-      <div class="plan-card">
-        <h4>Physical</h4>
-        <div class="price">$440</div>
-        <div class="meta">$110 / lesson</div>
+
+    <div style="background:var(--highlight);border-left:4px solid var(--crimson);border-radius:8px;padding:0.75rem 1rem;margin:0 0 0.75rem;">
+      <p style="margin:0;font-size:1rem;color:var(--text);">Choose <strong>Online</strong> or attend our <strong>Physical Centre</strong>. WhatsApp us for details.</p>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+      <div class="tier-row">
+        <div class="tier-card">
+          <div class="tier-tag">Online</div>
+          <div class="tier-price">$400</div>
+          <div class="tier-per">$100 / lesson</div>
+        </div>
+        <div class="tier-card highlight">
+          <div class="tier-tag">Physical</div>
+          <div class="tier-price">$440</div>
+          <div class="tier-per">$110 / lesson</div>
+        </div>
       </div>
     </div>
-    <h3 style="margin-top:26px">Available Slots</h3>
-    <table class="schedule">
+
+    <h3>Available Slots</h3>
+    <table class="schedule-table">
       <thead><tr><th>Day</th><th>Time</th></tr></thead>
       <tbody>
-        <tr><td>Wednesdays</td><td>5&ndash;7pm</td></tr>
-        <tr><td>Sundays</td><td>2.30&ndash;4.30pm</td></tr>
+        <tr><td>Wednesdays</td><td>5–7pm</td></tr>
+        <tr><td>Sundays</td><td>2.30–4.30pm</td></tr>
       </tbody>
     </table>
-    <div class="format-note">
-      <strong>G.E.M.S. in every lesson:</strong> Coach John guides using your child's natural strengths, empathises with where they're stuck, motivates through small wins, and simplifies the hard topics until they click. This is how a child goes from dreading Math to scoring in it.
+
+    <ul class="check-list">
+      <li>Personalised attention on your child's gaps</li>
+      <li>WhatsApp revision notes after every lesson</li>
+      <li>Full lesson recordings for catch-up</li>
+    </ul>
+
+    <div class="info-block">
+      <p><strong>G.E.M.S. in every lesson:</strong> Coach John guides using your child's natural strengths, empathises with where they're stuck, motivates through small wins, and simplifies the hard topics until they click. This is how a child goes from dreading Math to scoring in it.</p>
     </div>
+
+    <div class="story-nudge">👇 Ready to sign up? Here's everything you need to know about fees and payment.</div>
+    <a href="#page1" class="back-top">↑ Back to top</a>
   </div>
 </section>
 
-<section class="alt" id="pricing">
-  <div class="wrap">
-    <span class="section-label">First 10 Sign-Ups Only</span>
+<!-- ══════════════════════════════════
+     PAGE 5 — Pricing & Payment
+══════════════════════════════════ -->
+<section class="page page-white" id="page5">
+  <div class="page-inner">
+    <span class="page-badge">Page 5 of 7</span>
+    <span class="pill">First 10 Sign-Ups Only</span>
     <h2>🏆 Pricing &amp; Payment</h2>
-    <p>Pick the programme that fits your child's needs. All payments via PayNow.</p>
-    <table class="pricing-table">
-      <thead><tr><th>Programme</th><th>Price</th></tr></thead>
+    <p style="font-size:1rem;color:var(--muted);margin-bottom:0.25rem;">Pick the programme that fits your child's needs. All payments via PayNow.</p>
+    <div class="divider"></div>
+
+    <h3>All Programmes at a Glance</h3>
+    <table class="pricing-summary">
+      <thead>
+        <tr>
+          <th>Programme</th>
+          <th>Price</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr><td>Prelim Intensive &middot; 3 sessions &middot; 2.5hr each &middot; Online</td><td class="price-col">$225</td></tr>
-        <tr><td>Spot PSLE Question Types &middot; 4 sessions &middot; 1hr each &middot; Online</td><td class="price-col">$289</td></tr>
-        <tr><td>4-Lesson Trial &middot; Online (P6) &middot; 4 lessons &middot; 2hr each</td><td class="price-col">$400</td></tr>
-        <tr><td>4-Lesson Trial &middot; Physical (P6) &middot; 4 lessons &middot; 2hr each</td><td class="price-col">$440</td></tr>
+        <tr>
+          <td class="prog-col">Prelim Intensive<br><span style="font-size:0.78rem;color:var(--muted);font-weight:400;">3 sessions · 2.5hr each · Online</span></td>
+          <td style="color:var(--text);font-size:1rem;font-weight:600;vertical-align:top;padding:0.6rem 0.7rem;">$225</td>
+        </tr>
+        <tr>
+          <td class="prog-col">Spot PSLE Question Types<br><span style="font-size:0.78rem;color:var(--muted);font-weight:400;">4 sessions · 1hr each · Online</span></td>
+          <td style="color:var(--text);font-size:1rem;font-weight:600;vertical-align:top;padding:0.6rem 0.7rem;">$289</td>
+        </tr>
+        <tr>
+          <td class="prog-col">4-Lesson Trial · Online (P6)<br><span style="font-size:0.78rem;color:var(--muted);font-weight:400;">4 lessons · 2hr each</span></td>
+          <td style="color:var(--text);font-size:1rem;font-weight:600;vertical-align:top;padding:0.6rem 0.7rem;">$400</td>
+        </tr>
+        <tr>
+          <td class="prog-col">4-Lesson Trial · Physical (P6)<br><span style="font-size:0.78rem;color:var(--muted);font-weight:400;">4 lessons · 2hr each</span></td>
+          <td style="color:var(--text);font-size:1rem;font-weight:600;vertical-align:top;padding:0.6rem 0.7rem;">$440</td>
+        </tr>
       </tbody>
     </table>
 
-    <h3 style="margin-top:26px">🎁 Save More When You Learn More</h3>
-    <table class="save-table">
-      <thead><tr><th>If you enrol in...</th><th>You Save</th></tr></thead>
-      <tbody>
-        <tr><td>1 programme</td><td>Standard Price</td></tr>
-        <tr><td>Any 2 programmes</td><td>5% OFF</td></tr>
-        <tr><td>⭐ Any 3 programmes</td><td>10% OFF (Best Value)</td></tr>
-      </tbody>
-    </table>
-
-    <div class="payment-box">
-      <dl>
-        <dt>💳 How to Pay</dt>
-        <dd>PayNow to UEN 201410491Z</dd>
-        <dt>Company</dt>
-        <dd>Learning Out Of The Box Education Centre Pte Ltd</dd>
-        <dt>Reference</dt>
-        <dd>Child's full name</dd>
-        <dt>After Payment</dt>
-        <dd>Send screengrab to <a href="mailto:lobfees@gmail.com">lobfees@gmail.com</a></dd>
-      </dl>
+    <!-- Save More -->
+    <div style="background:var(--white);border:2px solid var(--crimson);border-radius:12px;padding:1.1rem 1.25rem;margin:1.25rem 0;">
+      <p style="font-family:var(--font);font-size:1rem;font-weight:800;color:var(--crimson);margin-bottom:0.85rem;">🎁 Save More When You Learn More</p>
+      <table style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border);">
+            <th style="text-align:left;padding:0.4rem 0.5rem;font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">If you enrol in...</th>
+            <th style="text-align:left;padding:0.4rem 0.5rem;font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">You Save</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:0.55rem 0.5rem;font-size:1rem;color:var(--text);">1 programme</td>
+            <td style="padding:0.55rem 0.5rem;font-size:1rem;color:var(--muted);">Standard Price</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:0.55rem 0.5rem;font-size:1rem;color:var(--text);">Any 2 programmes</td>
+            <td style="padding:0.55rem 0.5rem;font-size:1rem;font-weight:700;color:var(--crimson);">5% OFF</td>
+          </tr>
+          <tr>
+            <td style="padding:0.55rem 0.5rem;font-size:1rem;color:var(--text);">⭐ Any 3 programmes</td>
+            <td style="padding:0.55rem 0.5rem;font-size:1rem;font-weight:800;color:var(--crimson);">10% OFF <span style="font-size:0.82rem;font-weight:600;">(Best Value)</span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="format-note" style="margin-top:20px">
-      ⚠️ All materials sent digitally to parents for online lessons. Webcam must be on throughout.<br><br>
-      💛 <strong>A Note on Commitment:</strong> Fees are non-refundable as seats are reserved for committed families. Full session recordings are provided if you miss a class.
+    <h3>💳 How to Pay</h3>
+    <div class="paynow-card">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;flex-shrink:0;">
+        <img src="paynow.jpg" alt="PayNow QR Code" class="paynow-qr">
+        <span style="font-size:0.68rem;color:var(--muted);text-align:center;line-height:1.4;">Hold image to<br>save to Photos</span>
+      </div>
+      <div>
+        <span class="paynow-badge">📱 PayNow</span>
+        <div class="paynow-row"><span class="lbl">UEN</span><span class="val">201410491Z</span></div>
+        <div class="paynow-row"><span class="lbl">Company</span><span class="val">Learning Out Of The Box Education Centre Pte Ltd</span></div>
+        <div class="paynow-note">
+          <strong>Reference:</strong> Child's full name<br>
+          <strong>After payment:</strong> Send screengrab to <a href="mailto:lobfees@gmail.com" style="color:var(--crimson);">lobfees@gmail.com</a>
+        </div>
+      </div>
     </div>
 
-    <div style="text-align:center;margin-top:26px">
-      <a class="btn" href="https://wa.me/6585037519">Reserve My Child's Seat →</a>
+    <h3>⚠️ Key Reminders</h3>
+    <ul class="reminder-list">
+      <li><span class="emoji">📎</span>All materials sent digitally to parents for online lessons</li>
+      <li><span class="emoji">📹</span>Webcam must be on throughout</li>
+    </ul>
+
+    <div class="refund-box">
+      <p><strong>💛 A Note on Commitment</strong><br>We do our best work with parents and students who are genuinely committed to improving. If that's you, we warmly welcome you to join us. Full session recordings are provided if you miss a class. Fees are non-refundable as seats are reserved for committed families.</p>
     </div>
+
+    <div class="story-nudge">👇 Don't just take our word for it. Here's what parents say.</div>
+    <a href="#page1" class="back-top">↑ Back to top</a>
   </div>
 </section>
 
-<section id="testimonials">
-  <div class="wrap">
-    <span class="section-label">Results</span>
+<!-- ══════════════════════════════════
+     PAGE 6 — Testimonials
+══════════════════════════════════ -->
+<section class="page page-dark" id="page6">
+  <div class="page-inner">
+    <span class="page-badge">Page 6 of 7</span>
+    <span class="pill">Results</span>
     <h2>⭐ What Parents Say</h2>
-    <p>These parents wanted better grades for their child. They committed. Here's what the G.E.M.S. Method delivered.</p>
+    <p style="font-size:1rem;color:rgba(255,255,255,0.75);margin-bottom:0.25rem;">These parents wanted better grades for their child. They committed. Here's what the G.E.M.S. Method delivered.</p>
+    <div class="divider"></div>
+
     <div class="testi-grid">
-      <div class="testi">
-        <div class="headline">+42 Marks in 3 Months</div>
-        <p>"My girl improved by over 42 marks. Her attitude towards Math has improved so much. She feels more confident."</p>
-        <div class="who">— Regina's Parent, P6</div>
+      <div class="testimonial">
+        <span class="result-tag">+42 marks in 3 months</span>
+        <div class="testi-quote">"My girl improved by over 42 marks. Her attitude towards Math has improved so much. She feels more confident."</div>
+        <div class="testi-attrib">— Regina's Parent, P6</div>
       </div>
-      <div class="testi">
-        <div class="headline">Prelim → PSLE AL1</div>
-        <p>"She scored low 60+ for Prelim. Two months later, on PSLE result day, her score rose to AL1."</p>
-        <div class="who">— Parent, P6 PSLE</div>
+      <div class="testimonial">
+        <span class="result-tag">Prelim → PSLE AL1</span>
+        <div class="testi-quote">"She scored low 60+ for Prelim. Two months later, on PSLE result day, her score rose to AL1."</div>
+        <div class="testi-attrib">— Parent, P6 PSLE</div>
       </div>
-      <div class="testi">
-        <div class="headline">AL5 → AL2</div>
-        <p>"I jumped from AL5 to AL2!"</p>
-        <div class="who">— Student, P6 PSLE</div>
+      <div class="testimonial">
+        <span class="result-tag">AL5 → AL2</span>
+        <div class="testi-quote">"I jumped from AL5 to AL2!"</div>
+        <div class="testi-attrib">— Student, P6 PSLE</div>
       </div>
-      <div class="testi">
-        <div class="headline">50+ → 75 Marks</div>
-        <p>"Previously she couldn't score in Paper 2 at all. Her recent Prelim was 75. She couldn't believe it either."</p>
-        <div class="who">— Parent, P6 Prelim</div>
+      <div class="testimonial">
+        <span class="result-tag">50+ → 75 marks</span>
+        <div class="testi-quote">"Previously she couldn't score in Paper 2 at all. Her recent Prelim was 75. She couldn't believe it either."</div>
+        <div class="testi-attrib">— Parent, P6 Prelim</div>
       </div>
-      <div class="testi">
-        <div class="headline">PSLE AL1</div>
-        <p>"In the past she could go blank during exams and even have nausea. She has scored AL1 for Maths in PSLE."</p>
-        <div class="who">— Sze Wei, Mother of Ashley, P6</div>
+      <div class="testimonial">
+        <span class="result-tag">PSLE AL1</span>
+        <div class="testi-quote">"In the past she could go blank during exams and even have nausea. She has scored AL1 for Maths in PSLE."</div>
+        <div class="testi-attrib">— Sze Wei, Mother of Ashley, P6</div>
       </div>
     </div>
+
+    <div class="story-nudge">👇 Want to know the method behind these results? Meet Coach John.</div>
+    <a href="#page1" class="back-top">↑ Back to top</a>
   </div>
 </section>
 
-<section class="alt" id="method">
-  <div class="wrap">
-    <span class="section-label">The Method Behind the Results</span>
-    <h2>The G.E.M.S. Method™</h2>
-    <p><strong>Coach John Yeo</strong> · PSLE Math Coach · Ex Social Worker · Dad of 3</p>
+<!-- ══════════════════════════════════
+     PAGE 7 — Coach John + GEMS
+══════════════════════════════════ -->
+<section class="page page-white" id="page7">
+  <div class="page-inner">
+    <span class="page-badge">Page 7 of 7</span>
+    <span class="pill">Your Coach</span>
+    <h2>The Method Behind the Results</h2>
+    <div class="divider"></div>
+
+    <div class="coach-hero">
+      <img src="coach-john.jpg" alt="Coach John Yeo" class="coach-photo">
+      <div>
+        <div class="coach-name">Coach John Yeo</div>
+        <div class="coach-role">PSLE Math Coach · Ex Social Worker · Dad of 3</div>
+      </div>
+    </div>
+
     <div class="stat-row">
-      <div class="stat"><div class="num">40,000+</div><div class="label">Families helped over 15 years</div></div>
-      <div class="stat"><div class="num">70+</div><div class="label">Math guidebooks authored</div></div>
+      <div class="stat-box">
+        <span class="stat-num">40,000+</span>
+        <span class="stat-lbl">Families helped over 15 years through books, workshops and lessons</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">70+</span>
+        <span class="stat-lbl">Math guidebooks authored</span>
+      </div>
     </div>
-    <p style="font-size:14px;color:var(--muted)">As seen on CCTV America and Channel 8 狮城有约.</p>
-    <p>Every session runs on this 4-part framework &mdash; it's why students go from dreading Maths to owning it.</p>
-    <div class="gems-grid">
-      <div class="gem"><div class="letter">G</div><h4>Guide</h4><p>We get curious about how their mind works, then guide using their natural strengths.</p></div>
-      <div class="gem"><div class="letter">E</div><h4>Empathize</h4><p>Every eye-roll, every "I can't". It's not defiance &mdash; it's "I need help but don't know how to ask."</p></div>
-      <div class="gem"><div class="letter">M</div><h4>Motivate</h4><p>We celebrate effort, not just marks. When children feel capable, they become capable.</p></div>
-      <div class="gem"><div class="letter">S</div><h4>Simplify</h4><p>Complex problems become simple when broken into bite-sized steps that click for each child.</p></div>
+
+    <h3>As Seen In</h3>
+    <div class="press-grid">
+      <div class="press-card">
+        <img src="press1.jpg" alt="CCTV America">
+        <div class="press-label">📡 CCTV America</div>
+      </div>
+      <div class="press-card">
+        <img src="press2.jpg" alt="Channel 8 狮城有约">
+        <div class="press-label">📺 Channel 8 狮城有约</div>
+      </div>
     </div>
-    <p style="margin-top:20px">Every lesson, every session, every WhatsApp note your child receives is built on these 4 principles. The goal is never just content coverage. It's to build a child who believes they can score. And then shows up and does it.</p>
+
+    <h3>The G.E.M.S. Method™</h3>
+    <p>Every session runs on this 4-part framework. It's why students go from dreading Maths to owning it.</p>
+    <div class="gems-flow">
+      <div class="gem-card-new">
+        <div class="gem-icon-ring"><span class="gem-big-letter">G</span></div>
+        <div class="gem-body">
+          <div class="gem-word">Guide</div>
+          <p class="gem-tagline">"Building confident problem solvers."</p>
+          <p class="gem-desc">We get curious about how <strong>their mind</strong> works, then guide using their natural strengths.</p>
+        </div>
+      </div>
+      <div class="gems-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M7 14l5 5 5-5" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="gem-card-new">
+        <div class="gem-icon-ring"><span class="gem-big-letter">E</span></div>
+        <div class="gem-body">
+          <div class="gem-word">Empathize</div>
+          <p class="gem-tagline">"Understanding your child's unique learning needs."</p>
+          <p class="gem-desc">Every eye-roll, every "I can't". It's not defiance. It's <strong>"I need help but don't know how to ask."</strong></p>
+        </div>
+      </div>
+      <div class="gems-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M7 14l5 5 5-5" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="gem-card-new">
+        <div class="gem-icon-ring"><span class="gem-big-letter">M</span></div>
+        <div class="gem-body">
+          <div class="gem-word">Motivate</div>
+          <p class="gem-tagline">"From 'I can't' to 'I've got this!'"</p>
+          <p class="gem-desc">We celebrate effort, not just marks. <strong>When children feel capable, they become capable.</strong></p>
+        </div>
+      </div>
+      <div class="gems-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M7 14l5 5 5-5" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="gem-card-new">
+        <div class="gem-icon-ring"><span class="gem-big-letter">S</span></div>
+        <div class="gem-body">
+          <div class="gem-word">Simplify</div>
+          <p class="gem-tagline">"Making complex math crystal clear."</p>
+          <p class="gem-desc">Complex problems become simple when broken into <strong>bite-sized steps that click</strong> for each child.</p>
+        </div>
+      </div>
+    </div>
+    <p class="gems-tm">G.E.M.S. Method™ · Learning Out of the Box</p>
+
+    <div class="info-block" style="margin-top:1rem;">
+      <p>Every lesson, every session, every WhatsApp note your child receives is built on these 4 principles. The goal is never just content coverage. It's to build a child who <strong>believes they can score</strong>. And then shows up and does it.</p>
+    </div>
+
+    <a href="#page1" class="back-top">↑ Back to top</a>
   </div>
 </section>
 
+<!-- ── FOOTER ── -->
 <footer>
-  <div class="wrap">
-    <h3 style="color:#fff">Learning Out of the Box</h3>
-    <p><a href="https://learningoutofthebox.org">learningoutofthebox.org</a> · <a href="https://wa.me/6585037519">WhatsApp Us</a></p>
-    <div class="fine">© 2026 Coach John Yeo · All rights reserved</div>
-  </div>
+  <img src="logo-owl.png" alt="Learning Out of the Box">
+  <p><strong>Learning Out of the Box</strong></p>
+  <p><a href="https://learningoutofthebox.org">learningoutofthebox.org</a></p>
+  <p style="margin-top:0.4rem;">© 2026 Coach John Yeo · All rights reserved</p>
 </footer>
 
 </body>
