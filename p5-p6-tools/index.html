@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P5 &amp; P6 Interactive Math Tools | Learning Out of the Box</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  img { max-width: 100%; display: block; }
+
+  :root {
+    --bg: #FDF0EE;
+    --crimson: #8B1A1A;
+    --accent: #C0392B;
+    --text: #1A1A1A;
+    --muted: #333333;
+    --highlight: #FADADD;
+    --border: #D3CBCB;
+    --white: #ffffff;
+    --font: 'Montserrat', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--bg); border-bottom: 2px solid var(--border);
+    padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .logo-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-wrap img { height: 40px; width: auto; }
+  .brand-text strong { display: block; font-family: var(--font); font-size: 0.82rem; font-weight: 800; color: var(--crimson); }
+  .brand-text span { font-size: 0.65rem; color: var(--muted); }
+  .header-right { display: flex; align-items: center; gap: 0.6rem; }
+  .wa-header-btn {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: #25D366; color: #fff;
+    font-weight: 800; font-size: 0.72rem;
+    text-decoration: none; padding: 0.35rem 0.75rem; border-radius: 6px; white-space: nowrap;
+  }
+
+  /* ── PAGE SHELL ── */
+  .page { padding: 2.5rem 1.25rem 4.5rem; display: flex; flex-direction: column; align-items: center; }
+  .page-inner { width: 100%; max-width: 680px; }
+
+  h1 { font-family: var(--font); font-size: clamp(1.6rem,5vw,2.2rem); font-weight: 900; color: var(--crimson); line-height: 1.15; margin-bottom: 0.4rem; }
+  h2 { font-family: var(--font); font-size: clamp(1.1rem,3.5vw,1.4rem); font-weight: 800; color: var(--crimson); line-height: 1.25; margin: 2rem 0 0.5rem; }
+  p { color: var(--muted); font-size: 1rem; margin-bottom: 0.75rem; line-height: 1.65; }
+  .pill {
+    display: inline-block; background: var(--highlight); color: var(--crimson);
+    font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.2rem 0.7rem; border-radius: 4px; margin-bottom: 0.6rem;
+  }
+  .divider { width: 40px; height: 3px; background: var(--border); border-radius: 2px; margin: 0.5rem 0 1.25rem; }
+
+  /* ── TOOL CARDS ── */
+  .tool-grid { display: flex; flex-direction: column; gap: 0.55rem; margin: 0.5rem 0 0.5rem; }
+  .tool-card {
+    display: flex; align-items: center; gap: 0.9rem;
+    background: var(--white); border: 1.5px solid var(--border); border-radius: 10px;
+    padding: 0.8rem 1rem; text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .tool-card:hover { border-color: var(--crimson); box-shadow: 0 4px 14px rgba(139,26,26,0.12); transform: translateY(-1px); }
+  .tool-icon {
+    font-size: 1.4rem; flex-shrink: 0;
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--highlight); display: flex; align-items: center; justify-content: center;
+  }
+  .tool-info { flex: 1; }
+  .tool-name { font-family: var(--font); font-size: 0.95rem; font-weight: 800; color: var(--crimson); line-height: 1.25; }
+  .tool-arrow { color: var(--crimson); font-size: 1.1rem; flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  footer { text-align: center; padding: 1.75rem 1.25rem; font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--border); background: var(--bg); }
+  footer img { height: 32px; width: auto; margin: 0 auto 0.4rem; }
+  footer a { color: var(--crimson); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <a href="https://www.learningoutofthebox.org" target="_blank" rel="noopener" class="logo-wrap">
+    <img src="/p5-p6-tools/logo-owl.png" alt="Learning Out of the Box">
+    <div class="brand-text">
+      <strong>Learning Out of the Box</strong>
+      <span>learningoutofthebox.org</span>
+    </div>
+  </a>
+  <div class="header-right">
+    <a href="https://wa.link/qkft5g" target="_blank" rel="noopener" class="wa-header-btn">💬 WhatsApp Us</a>
+  </div>
+</header>
+
+<section class="page">
+  <div class="page-inner">
+
+    <span class="pill">Free Interactive Tools</span>
+    <h1>P5 &amp; P6 Interactive Math Tools</h1>
+    <p>Visual, hands-on tools that make abstract PSLE math concepts click. Tap any tool below to try it &mdash; each opens in its own page.</p>
+    <div class="divider"></div>
+
+    <h2>📘 P5 Interactive Tools</h2>
+    <div class="tool-grid">
+      <a href="https://different-one-whole.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">🍰</span>
+        <div class="tool-info"><div class="tool-name">Different One Whole</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://triangle-half-of-rectangle.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">📐</span>
+        <div class="tool-info"><div class="tool-name">Triangle = Half of Rectangle</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://squares-and-cubes-xi.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">🟦</span>
+        <div class="tool-info"><div class="tool-name">Squares &amp; Cubes</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://maths-converter.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">🔄</span>
+        <div class="tool-info"><div class="tool-name">Maths Converter (Ratio/Fraction/Decimal/%)</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://fractions-of-it.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">➗</span>
+        <div class="tool-info"><div class="tool-name">Fraction of It vs Fraction with Units</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://cube-explorer-tau.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">🧊</span>
+        <div class="tool-info"><div class="tool-name">3D Cube Explorer</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://netfold-app-acae.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">📦</span>
+        <div class="tool-info"><div class="tool-name">Nets</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://equal-concepts.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">⚖️</span>
+        <div class="tool-info"><div class="tool-name">Equal Concepts (5 Types)</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://123-sides-of-tank-painted.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">🎨</span>
+        <div class="tool-info"><div class="tool-name">123 Sides of Tank Painted</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://grouping-one.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">🔢</span>
+        <div class="tool-info"><div class="tool-name">Grouping</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+    </div>
+
+    <h2>📗 P6 Interactive Tools</h2>
+    <div class="tool-grid">
+      <a href="https://circle-wheel-to-wall.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">⭕</span>
+        <div class="tool-info"><div class="tool-name">Circle Wheel to Wall</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://bar-model-simulator.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">📊</span>
+        <div class="tool-info"><div class="tool-name">Bar Model Simulator</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://bo-shapes.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">🔵</span>
+        <div class="tool-info"><div class="tool-name">Basic Odd Shapes (Circles)</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://combined-base-area.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">📐</span>
+        <div class="tool-info"><div class="tool-name">Combined Base Area</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://volume-rate-time.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">🚰</span>
+        <div class="tool-info"><div class="tool-name">Volume Rate (Tap In/Out)</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+      <a href="https://p6-angles-ws19.vercel.app" target="_blank" rel="noopener" class="tool-card">
+        <span class="tool-icon">📏</span>
+        <div class="tool-info"><div class="tool-name">Angles</div></div>
+        <span class="tool-arrow">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <img src="/p5-p6-tools/logo-owl.png" alt="Learning Out of the Box">
+  <p><strong>Learning Out of the Box</strong></p>
+  <p><a href="https://learningoutofthebox.org">learningoutofthebox.org</a></p>
+  <p style="margin-top:0.4rem;">© 2026 Coach John Yeo · All rights reserved</p>
+</footer>
+
+</body>
+</html>
