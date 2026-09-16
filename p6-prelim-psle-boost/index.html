@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Term 3 Math Power Pack | Learning Out of the Box</title>
+<meta name="description" content="P6 Term 3 2026: Prelim Intensive, Spot PSLE Question Types, and 4-Lesson Trial with Coach John Yeo." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Rubik:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --crimson:#960F0F;
+    --crimson-dark:#6e0b0b;
+    --turquoise:#0ABFBC;
+    --blue:#4A8FE7;
+    --bg:#F8F3F3;
+    --ink:#2b2323;
+    --muted:#6b5f5f;
+    --card:#ffffff;
+    --border:#eadfdf;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:'Nunito',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.55;
+  }
+  h1,h2,h3,h4{font-family:'Rubik',sans-serif;margin:0 0 .5em;color:var(--crimson-dark)}
+  a{color:inherit}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  .btn{
+    display:inline-block;
+    background:var(--crimson);
+    color:#fff!important;
+    text-decoration:none;
+    font-weight:800;
+    padding:14px 28px;
+    border-radius:999px;
+    font-size:16px;
+    box-shadow:0 6px 18px rgba(150,15,15,.25);
+    transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+
+  header.topbar{
+    background:var(--crimson);
+    color:#fff;
+    font-size:13px;
+    padding:8px 0;
+  }
+  header.topbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+  header.topbar a{color:#fff;text-decoration:none;font-weight:700}
+
+  .hero{
+    background:linear-gradient(160deg,var(--crimson) 0%,var(--crimson-dark) 100%);
+    color:#fff;
+    padding:56px 0 40px;
+    text-align:center;
+  }
+  .hero .eyebrow{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    padding:6px 16px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .hero h1{color:#fff;font-size:clamp(26px,5vw,38px);margin-bottom:14px}
+  .hero p.sub{font-size:17px;opacity:.92;max-width:620px;margin:0 auto 26px}
+  .hero .byline{font-size:14px;opacity:.8;margin-top:18px}
+
+  .plan-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px;
+    margin-top:30px;
+  }
+  .plan-card{
+    background:#fff;
+    border-radius:14px;
+    padding:18px;
+    text-align:left;
+    color:var(--ink);
+  }
+  .plan-card .emoji{font-size:22px}
+  .plan-card h4{font-size:15px;margin:8px 0 4px;color:var(--crimson-dark)}
+  .plan-card .meta{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+  .plan-card .price{font-size:19px;font-weight:900;color:var(--crimson);font-family:'Rubik',sans-serif}
+
+  section{padding:48px 0}
+  section.alt{background:#fff}
+  .section-label{
+    display:inline-block;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--turquoise);
+    margin-bottom:10px;
+  }
+
+  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0}
+  .stat{
+    flex:1 1 140px;
+    background:var(--bg);
+    border-radius:12px;
+    padding:16px;
+    text-align:center;
+  }
+  .stat .num{font-size:24px;font-weight:900;color:var(--crimson);font-family:'Rubik',sans-serif}
+  .stat .label{font-size:13px;color:var(--muted)}
+
+  table.schedule{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:16px;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+  }
+  table.schedule th, table.schedule td{
+    text-align:left;
+    padding:12px 14px;
+    border-bottom:1px solid var(--border);
+    font-size:14.5px;
+  }
+  table.schedule th{
+    background:var(--crimson);
+    color:#fff;
+    font-weight:700;
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+  table.schedule tr:last-child td{border-bottom:none}
+
+  .gain-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px;
+    margin-top:20px;
+  }
+  .gain{
+    background:var(--bg);
+    border-radius:12px;
+    padding:14px 16px;
+    font-size:14.5px;
+    font-weight:700;
+  }
+
+  .format-note{
+    background:#FFF6E9;
+    border:1px solid #F3D9A6;
+    border-radius:12px;
+    padding:16px 18px;
+    font-size:14.5px;
+    margin-top:20px;
+  }
+  .format-note strong{color:var(--crimson)}
+
+  .pricing-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:16px;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .pricing-table th, .pricing-table td{
+    text-align:left;
+    padding:12px 14px;
+    border-bottom:1px solid var(--border);
+    font-size:14px;
+  }
+  .pricing-table th{
+    background:var(--crimson);
+    color:#fff;
+    font-size:12px;
+    text-transform:uppercase;
+  }
+  .pricing-table .price-col{font-weight:800;color:var(--crimson);white-space:nowrap}
+
+  .save-table{width:100%;border-collapse:collapse;margin-top:14px;background:#fff;border-radius:10px;overflow:hidden}
+  .save-table th, .save-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:14px;text-align:left}
+  .save-table th{background:var(--turquoise);color:#fff;font-size:12px;text-transform:uppercase}
+
+  .payment-box{
+    background:var(--bg);
+    border-radius:12px;
+    padding:18px 20px;
+    margin-top:20px;
+    font-size:14px;
+  }
+  .payment-box dt{font-weight:800;color:var(--crimson-dark);margin-top:10px}
+  .payment-box dt:first-child{margin-top:0}
+  .payment-box dd{margin:2px 0 0}
+
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:16px;
+    margin-top:22px;
+  }
+  .testi{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:18px;
+  }
+  .testi .headline{
+    font-weight:800;
+    color:var(--turquoise);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    margin-bottom:8px;
+  }
+  .testi p{font-size:14.5px;margin:0 0 10px;font-style:italic}
+  .testi .who{font-size:13px;color:var(--muted);font-weight:700}
+
+  .gems-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:16px;
+    margin-top:22px;
+  }
+  .gem{
+    background:#fff;
+    border-radius:14px;
+    padding:20px;
+    border-top:4px solid var(--crimson);
+  }
+  .gem .letter{
+    font-size:26px;
+    font-weight:900;
+    color:var(--crimson);
+    font-family:'Rubik',sans-serif;
+  }
+  .gem h4{font-size:15.5px;margin:6px 0 6px}
+  .gem p{font-size:13.5px;color:var(--muted);margin:0}
+
+  footer{
+    background:var(--crimson-dark);
+    color:#fff;
+    padding:36px 0;
+    font-size:14px;
+    text-align:center;
+  }
+  footer a{color:#fff;text-decoration:underline}
+  footer .fine{opacity:.75;font-size:12.5px;margin-top:14px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <span>🎓 Learning Out of the Box · learningoutofthebox.org</span>
+    <a href="https://wa.me/6585037519">💬 WhatsApp Us</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">For P6 Students · Term 3 2026</span>
+    <h1>Your Child Walks Into PSLE Knowing What to Expect</h1>
+    <p class="sub">Confident, prepared, and ready to score. The Term 3 Math Power Pack with Coach John Yeo.</p>
+    <p class="byline">By Coach John Yeo · LOB Education Centre</p>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="emoji">📖</div>
+        <h4>Prelim Intensive</h4>
+        <div class="meta">3 sessions · 2.5hr each · Online · Jun–Jul</div>
+        <div class="price">$225</div>
+      </div>
+      <div class="plan-card">
+        <div class="emoji">🔍</div>
+        <h4>Spot PSLE Question Types</h4>
+        <div class="meta">4 sessions · 1hr each · Online · Sep</div>
+        <div class="price">$289</div>
+      </div>
+      <div class="plan-card">
+        <div class="emoji">📦</div>
+        <h4>Prelim + Spot Bundle</h4>
+        <div class="meta">Both workshops together · 5% off</div>
+        <div class="price">$488</div>
+      </div>
+      <div class="plan-card">
+        <div class="emoji">🎯</div>
+        <h4>4-Lesson Trial</h4>
+        <div class="meta">Regular weekly coaching · Online or Physical</div>
+        <div class="price">from $400</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prelim">
+  <div class="wrap">
+    <span class="section-label">Prelim Readiness</span>
+    <h2>📖 Prelim Intensive (3 sessions)</h2>
+    <p>More marks come from knowing what the question is really asking. This workshop trains your child to see the pattern, apply the right method, and stop losing marks to questions they actually can solve.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">3</div><div class="label">Sessions</div></div>
+      <div class="stat"><div class="num">2.5hr</div><div class="label">Per session</div></div>
+      <div class="stat"><div class="num">Online</div><div class="label">Via Zoom</div></div>
+      <div class="stat"><div class="num">$225</div><div class="label">$75 / session</div></div>
+    </div>
+    <p style="font-size:14.5px">New worksheet + full video replay solutions every session. Covers Remainder · Fractions · Ratio · Average · Angles &amp; more. Open to new and existing LOB students.</p>
+    <div class="format-note">
+      <strong>Simplify in action:</strong> Coach John breaks each question type into a clear, repeatable method. Your child doesn't just practise &mdash; they understand why the method works. That understanding is what holds under exam pressure and translates into marks.
+    </div>
+    <h3 style="margin-top:26px">Term 3 Schedule</h3>
+    <table class="schedule">
+      <thead><tr><th>#</th><th>Date</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Mon, 29 Jun 2026</td><td>6&ndash;8.30pm</td></tr>
+        <tr><td>2</td><td>Fri, 17 Jul 2026</td><td>6&ndash;8.30pm</td></tr>
+        <tr><td>3</td><td>Mon, 27 Jul 2026</td><td>6&ndash;8.30pm</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="alt" id="spot">
+  <div class="wrap">
+    <span class="section-label">PSLE Readiness</span>
+    <h2>🔍 Spot PSLE Question Types (4 sessions)</h2>
+    <p>The child who walks into PSLE and recognises the question type in 5 seconds has a massive advantage. This workshop builds exactly that instinct. Your child spends exam time solving, not deciphering.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">4</div><div class="label">Sessions</div></div>
+      <div class="stat"><div class="num">1hr</div><div class="label">Per session</div></div>
+      <div class="stat"><div class="num">Zoom</div><div class="label">Online</div></div>
+      <div class="stat"><div class="num">$289</div><div class="label">4 sessions</div></div>
+    </div>
+    <p style="font-size:14.5px"><strong>Guide + Simplify in action:</strong> every session, your child learns to read a question and immediately identify the method needed. No more blanking out. No more wasted time re-reading. Just recognition, method, marks.</p>
+    <h3 style="margin-top:20px">What Your Child Gains</h3>
+    <div class="gain-grid">
+      <div class="gain">🎯 Spot question types instantly</div>
+      <div class="gain">🧠 Strategic note-taking skills</div>
+      <div class="gain">💪 Exam confidence boost</div>
+      <div class="gain">📓 Active learning, no worksheets</div>
+    </div>
+    <h3 style="margin-top:26px">Term 3 Schedule</h3>
+    <table class="schedule">
+      <thead><tr><th>#</th><th>Date</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Fri, 4 Sep 2026</td><td>6&ndash;7pm</td></tr>
+        <tr><td>2</td><td>Mon, 7 Sep 2026</td><td>6&ndash;7pm</td></tr>
+        <tr><td>3</td><td>Mon, 21 Sep 2026</td><td>3&ndash;4pm</td></tr>
+        <tr><td>4</td><td>Wed, 23 Sep 2026</td><td>6&ndash;7pm</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="trial">
+  <div class="wrap">
+    <span class="section-label">Ongoing Support</span>
+    <h2>🎯 4-Lesson Trial</h2>
+    <p>This is where the grade improvement begins. Regular, structured coaching that builds on itself week after week. Not a one-off fix.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">4</div><div class="label">Lessons</div></div>
+      <div class="stat"><div class="num">2hr</div><div class="label">Per lesson</div></div>
+      <div class="stat"><div class="num">P6</div><div class="label">Open to</div></div>
+    </div>
+    <div class="plan-grid" style="margin-top:10px">
+      <div class="plan-card">
+        <h4>Online</h4>
+        <div class="price">$400</div>
+        <div class="meta">$100 / lesson</div>
+      </div>
+      <div class="plan-card">
+        <h4>Physical</h4>
+        <div class="price">$440</div>
+        <div class="meta">$110 / lesson</div>
+      </div>
+    </div>
+    <h3 style="margin-top:26px">Available Slots</h3>
+    <table class="schedule">
+      <thead><tr><th>Day</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>Wednesdays</td><td>5&ndash;7pm</td></tr>
+        <tr><td>Sundays</td><td>2.30&ndash;4.30pm</td></tr>
+      </tbody>
+    </table>
+    <div class="format-note">
+      <strong>G.E.M.S. in every lesson:</strong> Coach John guides using your child's natural strengths, empathises with where they're stuck, motivates through small wins, and simplifies the hard topics until they click. This is how a child goes from dreading Math to scoring in it.
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="pricing">
+  <div class="wrap">
+    <span class="section-label">First 10 Sign-Ups Only</span>
+    <h2>🏆 Pricing &amp; Payment</h2>
+    <p>Pick the programme that fits your child's needs. All payments via PayNow.</p>
+    <table class="pricing-table">
+      <thead><tr><th>Programme</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Prelim Intensive &middot; 3 sessions &middot; 2.5hr each &middot; Online</td><td class="price-col">$225</td></tr>
+        <tr><td>Spot PSLE Question Types &middot; 4 sessions &middot; 1hr each &middot; Online</td><td class="price-col">$289</td></tr>
+        <tr><td>4-Lesson Trial &middot; Online (P6) &middot; 4 lessons &middot; 2hr each</td><td class="price-col">$400</td></tr>
+        <tr><td>4-Lesson Trial &middot; Physical (P6) &middot; 4 lessons &middot; 2hr each</td><td class="price-col">$440</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:26px">🎁 Save More When You Learn More</h3>
+    <table class="save-table">
+      <thead><tr><th>If you enrol in...</th><th>You Save</th></tr></thead>
+      <tbody>
+        <tr><td>1 programme</td><td>Standard Price</td></tr>
+        <tr><td>Any 2 programmes</td><td>5% OFF</td></tr>
+        <tr><td>⭐ Any 3 programmes</td><td>10% OFF (Best Value)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="payment-box">
+      <dl>
+        <dt>💳 How to Pay</dt>
+        <dd>PayNow to UEN 201410491Z</dd>
+        <dt>Company</dt>
+        <dd>Learning Out Of The Box Education Centre Pte Ltd</dd>
+        <dt>Reference</dt>
+        <dd>Child's full name</dd>
+        <dt>After Payment</dt>
+        <dd>Send screengrab to <a href="mailto:lobfees@gmail.com">lobfees@gmail.com</a></dd>
+      </dl>
+    </div>
+
+    <div class="format-note" style="margin-top:20px">
+      ⚠️ All materials sent digitally to parents for online lessons. Webcam must be on throughout.<br><br>
+      💛 <strong>A Note on Commitment:</strong> Fees are non-refundable as seats are reserved for committed families. Full session recordings are provided if you miss a class.
+    </div>
+
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn" href="https://wa.me/6585037519">Reserve My Child's Seat →</a>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <span class="section-label">Results</span>
+    <h2>⭐ What Parents Say</h2>
+    <p>These parents wanted better grades for their child. They committed. Here's what the G.E.M.S. Method delivered.</p>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="headline">+42 Marks in 3 Months</div>
+        <p>"My girl improved by over 42 marks. Her attitude towards Math has improved so much. She feels more confident."</p>
+        <div class="who">— Regina's Parent, P6</div>
+      </div>
+      <div class="testi">
+        <div class="headline">Prelim → PSLE AL1</div>
+        <p>"She scored low 60+ for Prelim. Two months later, on PSLE result day, her score rose to AL1."</p>
+        <div class="who">— Parent, P6 PSLE</div>
+      </div>
+      <div class="testi">
+        <div class="headline">AL5 → AL2</div>
+        <p>"I jumped from AL5 to AL2!"</p>
+        <div class="who">— Student, P6 PSLE</div>
+      </div>
+      <div class="testi">
+        <div class="headline">50+ → 75 Marks</div>
+        <p>"Previously she couldn't score in Paper 2 at all. Her recent Prelim was 75. She couldn't believe it either."</p>
+        <div class="who">— Parent, P6 Prelim</div>
+      </div>
+      <div class="testi">
+        <div class="headline">PSLE AL1</div>
+        <p>"In the past she could go blank during exams and even have nausea. She has scored AL1 for Maths in PSLE."</p>
+        <div class="who">— Sze Wei, Mother of Ashley, P6</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="method">
+  <div class="wrap">
+    <span class="section-label">The Method Behind the Results</span>
+    <h2>The G.E.M.S. Method™</h2>
+    <p><strong>Coach John Yeo</strong> · PSLE Math Coach · Ex Social Worker · Dad of 3</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">40,000+</div><div class="label">Families helped over 15 years</div></div>
+      <div class="stat"><div class="num">70+</div><div class="label">Math guidebooks authored</div></div>
+    </div>
+    <p style="font-size:14px;color:var(--muted)">As seen on CCTV America and Channel 8 狮城有约.</p>
+    <p>Every session runs on this 4-part framework &mdash; it's why students go from dreading Maths to owning it.</p>
+    <div class="gems-grid">
+      <div class="gem"><div class="letter">G</div><h4>Guide</h4><p>We get curious about how their mind works, then guide using their natural strengths.</p></div>
+      <div class="gem"><div class="letter">E</div><h4>Empathize</h4><p>Every eye-roll, every "I can't". It's not defiance &mdash; it's "I need help but don't know how to ask."</p></div>
+      <div class="gem"><div class="letter">M</div><h4>Motivate</h4><p>We celebrate effort, not just marks. When children feel capable, they become capable.</p></div>
+      <div class="gem"><div class="letter">S</div><h4>Simplify</h4><p>Complex problems become simple when broken into bite-sized steps that click for each child.</p></div>
+    </div>
+    <p style="margin-top:20px">Every lesson, every session, every WhatsApp note your child receives is built on these 4 principles. The goal is never just content coverage. It's to build a child who believes they can score. And then shows up and does it.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3 style="color:#fff">Learning Out of the Box</h3>
+    <p><a href="https://learningoutofthebox.org">learningoutofthebox.org</a> · <a href="https://wa.me/6585037519">WhatsApp Us</a></p>
+    <div class="fine">© 2026 Coach John Yeo · All rights reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
